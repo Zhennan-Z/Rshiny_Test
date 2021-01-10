@@ -36,7 +36,7 @@ if ("Missing" %in% uniq.grp ) {
   }
 
 # server.R
-server <- function(input, output, session) {
+shinyServer(function(input, output,session) {
   output$plot1 <- renderPlot({
     ggplot(ex_df, aes(PC1, PC2, color=Ancestry))  + geom_point(aes(colour = factor(Ancestry, levels = legend.group))) +
      scale_colour_manual(values=cols) 
@@ -63,5 +63,5 @@ server <- function(input, output, session) {
         }
     }
   })
-} 
+} )
  

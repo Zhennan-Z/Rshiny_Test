@@ -3,7 +3,7 @@ library(data.table)
 library(shiny)
 library(ggplot2)
 options(scipen = 999)
-# setwd("~/Dropbox/Work/UKBiobank/Paper/Rshiny")
+
 # global.R
 ex_df <- read.table("large_ex_Inference.txt", header = TRUE, stringsAsFactors = FALSE)
 ex_df$Ancestry[grep(";", ex_df$Ancestry)] <- "Missing"

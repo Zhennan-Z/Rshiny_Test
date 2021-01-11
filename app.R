@@ -52,12 +52,13 @@ ui <- fluidPage(
                 mainPanel(
                   
                   fluidRow(
-                                       plotOutput(outputId = "plot1", width = "100%")),
+                         plotOutput(outputId = "plot1", width = "100%")),
                   fluidRow(
                     column(width = 8,
                            verbatimTextOutput("click_info"),
                            verbatimTextOutput("last_infor"))))
   )
 )
+
 
 shinyApp(ui = ui, server = server)
